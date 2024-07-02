@@ -1,28 +1,27 @@
-REMIX DEFAULT WORKSPACE
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+# Remix Default Workspace
 
-This workspace contains 3 directories:
+The Remix default workspace is present in the following situations:
+1. When Remix is loaded for the very first time.
+2. When a new workspace is created using the 'Default' template.
+3. When no files exist in the File Explorer.
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+This workspace contains three directories:
 
-SCRIPTS
+1. **contracts**: This directory holds three contracts of increasing complexity.
+2. **scripts**: This folder contains four TypeScript files to deploy a contract, explained below.
+3. **tests**: This folder includes one Solidity test file for the 'Ballot' contract and one JavaScript test file for the 'Storage' contract.
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+## Scripts
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+The 'scripts' folder includes four TypeScript files that assist in deploying the 'Storage' contract using the 'web3.js' and 'ethers.js' libraries.
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+To deploy a different contract, update the contract name from 'Storage' to the desired contract and provide the necessary constructor arguments in the `deploy_with_ethers.ts` or `deploy_with_web3.ts` files.
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+## Tests
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+The 'tests' folder contains a Mocha-Chai unit test script for the 'Storage' contract.
+
+To run a script, right-click on the file name in the file explorer and select 'Run'. Ensure that the Solidity file is already compiled. The script output will appear in the Remix terminal.
+
+**Note:** The require/import functionality is supported in a limited manner for Remix-supported modules. Currently, Remix supports the following modules: `ethers`, `web3`, `swarmgw`, `chai`, `multihashes`, `remix`, and `hardhat` (only for the `hardhat.ethers` object/plugin). If you attempt to require an unsupported module, an error message will be displayed: `<module_name> module require is not supported by Remix IDE`.
